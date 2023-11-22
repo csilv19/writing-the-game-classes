@@ -1,22 +1,32 @@
-# Dark Wings RPG Game
+# Exemplo de Classe de Personagem
+Este código JavaScript apresenta uma classe chamada Character que representa um personagem em um jogo de RPG simples. A classe tem propriedades como name, level, e classCharacter, além de um método attackAction que exibe uma mensagem de ataque com base na classe do personagem.
 
-## Visão Geral
+## Uso
+1- Instanciar um Personagem:
 
-O código representa uma classe `Character` para um personagem de um jogo de RPG chamado "Dark Wings". Cada personagem possui uma classe (Guerreiro, Mago, Monge, Ninja) e uma ação de ataque associada a essa classe.
+const darkWings = new Character("Dark Wings", ["Guerreiro", "Mago", "Monge", "Ninja"]);
+//Chamar o Método attackAction:
 
-## Funcionalidades
-
-- A classe `Character` possui propriedades como nome, nível e classe.
-- A ação de ataque do personagem é determinada pela classe.
-- A classe usa um método `attackAction` para imprimir a ação de ataque correspondente à classe.
-
-## Como Usar
-
-1. Instancie um personagem usando a classe `Character`.
-2. Passe um array de classes (por exemplo, `["Guerreiro", "Mago", "Monge", "Ninja"]`) ao instanciar o personagem.
-3. Chame o método `attackAction` para ver a ação de ataque associada à classe do personagem.
-
-```javascript
-// Exemplo de uso da classe
-const darkWings = new Character(["Guerreiro", "Mago", "Monge", "Ninja"]);
 darkWings.attackAction();
+//Propriedades da Classe
+
+name: O nome do personagem. Padrão: "Dark Wings" se não fornecido durante a instância.
+
+level: Representa o nível do personagem (0 a 400).
+
+classCharacter: Array representando a classe do personagem (apenas a primeira é considerada).
+
+characterAttack: Array de tipos de ataques correspondentes a cada classe.
+
+typeCharacter: Array de tipos de personagens como "Guerreiro", "Mago", "Monge" e "Ninja".
+
+Método attackAction
+O método attackAction determina a classe do personagem e exibe uma mensagem de ataque com base nela. Se a classe não for reconhecida, pede ao usuário escolher um tipo de personagem.
+
+Exemplo de Saída:
+
+"Dark Wings do tipo Guerreiro, ataca com Espada!"
+"Dark Wings do tipo Mago, ataca com Magia!"
+"Dark Wings do tipo Monge, ataca com Artes marciais!"
+"Dark Wings do tipo Ninja, ataca com Shuriken!"
+"Dark Wings, escolha seu tipo de personagem."
